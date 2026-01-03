@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #F8FAF9;
+  --color-strategy-green: #2A7066;
+  --color-deep-forest: #1E2923;
+  --color-graphite: #334139;
+  --color-sage: #64746B;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-graphite);
+    @apply antialiased;
+  }
+}
+
+h1, h2, h3, h4 {
+  @apply tracking-tight;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#E2E8E5] rounded-full hover:bg-strategy-green/20;
+}
