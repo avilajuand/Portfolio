@@ -388,8 +388,10 @@ const translations = {
   }
 };
 
+type Language = keyof typeof translations;
+
 export default function App() {
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState<Language>('en');
   const t = translations[lang];
 
   return (
@@ -397,7 +399,7 @@ export default function App() {
       
       {/* Floating Language Switcher */}
       <div className="fixed top-6 right-6 z-50 flex gap-2 overflow-x-auto max-w-[calc(100vw-48px)] pb-2 no-scrollbar">
-        {['en', 'es', 'fr', 'kr'].map((l) => (
+      {(['en', 'es', 'fr', 'kr'] as Language[]).map((l) => (
           <button 
             key={l}
             onClick={() => setLang(l)}
