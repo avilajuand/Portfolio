@@ -24,7 +24,7 @@ export default function RootLayout({
             <footer className="mt-20 pt-8 border-t border-gray-200 text-center text-sm text-secondary">
               <p>© {new Date().getFullYear()} {content.hero.name}</p>
               <p className="mt-2 text-[10px] opacity-40 uppercase tracking-widest">
-                Node 23 • Next 16 • Tailwind 4
+              Crafted with care by Juan Avila.
               </p>
             </footer>
           </div>
